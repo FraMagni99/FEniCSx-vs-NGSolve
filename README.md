@@ -6,4 +6,4 @@ The files for NGSolve have been uploaded as .ipynb files in order to have the po
 Observations:
 - on FEniCSx the boundaries can only be exported as piecewise linear. If we want better accuracy, we need to import the mesh from an external software like Gmsh;
 - on NGsolve it's easy to represent the solution with curved boundaries using webgui. However, when the solution is saved in .vtu format (to have .xdmf files a further installation is required) the edges are exported as piecewise linear. It's possible to deal with this by refining the elements in the visualisation procedure (and not in the computations), but edges are still kept straight.
-- on NGSolve, if we want to impose boundary conditions on some components of the solution, the GridFunction must be saved as a list of scalar quantities. Thus, it's necessary to compose them (e.g., $ux * i_vec + uy * j_vec$) on ParaView.
+- on NGSolve, if we want to impose boundary conditions on some components of the solution, the GridFunction must be saved as a list of scalar quantities. Thus, it's necessary to compose them (e.g., $u_x * \hat{i} + u_y * \hat{j}$) on ParaView.
